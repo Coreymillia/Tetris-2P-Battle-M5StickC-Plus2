@@ -1,0 +1,102 @@
+{
+  "name": "2-Player Tetris Battle V2.2.0",
+  "version": "2.2.0", 
+  "author": "coreymillia + GitHub Copilot CLI",
+  "description": "Professional 2-player Tetris battle system with WiFi networking, enhanced gameplay features, and competitive mechanics. Features HOLD, NEXT, ghost pieces, 20 speed levels, garbage attacks, and synchronized multiplayer battles.",
+  "category": "Games & Entertainment",
+  "device": "M5StickC Plus 2",
+  "homepage": "https://github.com/coreymillia/2Player-Tetris-Battle",
+  "preview": "",
+  "icon": "",
+  "features": [
+    "🎮 Enhanced Tetris with HOLD, NEXT, and ghost piece systems",
+    "⚔️ 2-Player WiFi network battles with garbage attacks", 
+    "🏎️ 20 progressive speed levels (1000ms to 30ms drop speeds)",
+    "🧠 Progressive lock delay system optimized for each level",
+    "🌐 Synchronized multiplayer with individual level selection",
+    "💥 Competitive garbage attack system ('ATK!' and 'HIT!')",
+    "🏆 Win/lose detection with proper game endings",
+    "🎨 Professional UI with smart blue borders and clean layout",
+    "🎯 Standard Tetris piece colors and mechanics",
+    "⚡ 60fps smooth gameplay with optimized performance"
+  ],
+  "controls": {
+    "M5 Button": "Rotate piece clockwise / Start game",
+    "BtnA (Left)": "HOLD piece (once per piece)",
+    "BtnB (Right)": "Soft drop piece",
+    "PWR Button": "Pause game / Hard reset",
+    "Left+Right": "Host WiFi battle", 
+    "UP Button": "Scan for WiFi battles",
+    "Joystick": "Move piece left/right, rotate, drop"
+  },
+  "gameplay_modes": {
+    "Single Player": "Classic enhanced Tetris with all modern features",
+    "2-Player Battle": "WiFi networked competitive battles with garbage attacks",
+    "Level Selection": "Choose from 20 progressive difficulty levels",
+    "Mixed Skill": "Different players can play at different speeds"
+  },
+  "requirements": [
+    "M5StickC Plus 2 (2 units for battles)",
+    "WiFi network capability for multiplayer", 
+    "I2C Joystick Hat (optional but recommended)"
+  ],
+  "specifications": {
+    "playing_field": "10x20 standard Tetris grid",
+    "display_resolution": "135x240 pixels", 
+    "network_protocol": "WiFi P2P battle communication",
+    "game_speed": "20 levels: 1000ms (beginner) to 30ms (impossible)",
+    "lock_delay": "Progressive: 350ms-725ms based on level",
+    "response_time": "16ms update cycle (60fps)",
+    "memory_usage": "15.4% RAM (50KB), 78.5% Flash (1MB)"
+  },
+  "firmware": {
+    "bootloader": "0x1000",
+    "partitions": "0x8000", 
+    "app": "0x10000",
+    "merged": true,
+    "flash_offset": "0x0"
+  },
+  "flash_size": "4MB",
+  "chip": "ESP32-PICO-V3-02",
+  "installation": {
+    "method": "M5Burner",
+    "file": "TETRIS_V2.2.0_M5BURNER_MERGED.bin",
+    "size": "1100816",
+    "flash_address": "0x0"
+  },
+  "battle_setup": [
+    "1. Flash firmware to both M5StickC Plus2 devices",
+    "2. Power on first device - press Left+Right to HOST battle",
+    "3. Power on second device - press UP to SCAN and connect", 
+    "4. Both players select their skill level (0-19)",
+    "5. Game shows 'BATTLE MODE! 3 2 1 GO!' countdown",
+    "6. Both players ready up and battle begins!",
+    "7. Clear lines to send garbage attacks to opponent",
+    "8. First to top out loses - winner celebrates!"
+  ],
+  "enhanced_features": {
+    "HOLD_system": "Store current piece for later use (BtnA)",
+    "NEXT_preview": "See upcoming piece in top-right corner",
+    "ghost_pieces": "Transparent preview of piece drop location", 
+    "garbage_attacks": "Clear lines to send junk rows to opponent",
+    "level_progression": "Exponential speed curve for fair skill matching",
+    "smart_borders": "Clean blue boundaries with corner gaps for UI elements",
+    "battle_meter": "Real-time opponent danger level display"
+  },
+  "technical_details": {
+    "network_protocol": "Custom WiFi P2P battle communication",
+    "synchronization": "Countdown system ensures fair simultaneous start",
+    "garbage_algorithm": "Line clears generate attack rows with random gaps",
+    "piece_generation": "Standard 7-bag random generation system", 
+    "collision_detection": "Precise block-level boundary checking",
+    "lock_delay": "SRS-style lock delay with movement reset system",
+    "rendering": "Optimized field drawing with ghost piece overlay"
+  },
+  "version_history": {
+    "2.2.0": "Official release: Smart borders, V2.2 branding, production quality",
+    "2.1.0": "Enhanced UI with blue borders and corner gaps for HOLD/NEXT",
+    "2.0.0": "Major release: Full 2-player battles with garbage attacks working",
+    "1.9.0": "Synchronized gameplay and level selection implemented", 
+    "1.5.0": "Enhanced Tetris features: HOLD, NEXT, progressive lock delays"
+  }
+}
